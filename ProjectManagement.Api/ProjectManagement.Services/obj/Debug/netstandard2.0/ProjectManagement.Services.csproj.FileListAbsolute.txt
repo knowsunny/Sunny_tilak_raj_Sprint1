@@ -1,0 +1,12 @@
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.deps.json
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.dll
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.pdb
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Entities.dll
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Entities.pdb
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csprojAssemblyReference.cache
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.AssemblyInfoInputs.cache
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.AssemblyInfo.cs
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csproj.CoreCompileInputs.cache
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csproj.CopyComplete
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.dll
+I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.pdb
