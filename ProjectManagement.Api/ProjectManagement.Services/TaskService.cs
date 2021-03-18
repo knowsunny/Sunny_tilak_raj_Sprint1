@@ -2,36 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using ProjectManagement.Data.Interfaces;
+using ProjectManagement.Entities;
 using ProjectManagement.Services.Interfaces;
 
 namespace ProjectManagement.Services
 {
     public class TaskService : ITaskService
     {
-        public Task<bool> Create(ProjectManagement.Entities.Task task)
+
+        private readonly IBaseRepository<Task> _repository;
+
+        public TaskService(IBaseRepository<Task> repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+        }
+        public Task Create(ProjectManagement.Entities.Task task)
+        {
+            var result = _repository.Add(task);
+            return (Task)result;
         }
 
-        public Task Get(int taskId)
+        public List<Task> GetAllTasks()
         {
-            throw new NotImplementedException();
+            var result = _repository.Get();
+            return result.Cast<Task>().ToList();
         }
 
-        public IOrderedQueryable<ProjectManagement.Entities.Task> GetAllTasks()
+        public Task GetTaskByTaskId(int Id)
         {
-            throw new NotImplementedException();
+            var result = _repository.Get(Id);
+            return (Task)result;
         }
 
-        public IOrderedQueryable<ProjectManagement.Entities.Task> GetTaskByTaskId(int Id)
+        public bool Update(ProjectManagement.Entities.Task task)
         {
-            throw new NotImplementedException();
+            var ret = true;
+            var result = _repository.Update(task);
+            return ret;
         }
-
-        public Task<bool> Update(ProjectManagement.Entities.Task task)
+        public bool Delete(long Id)
         {
-            throw new NotImplementedException();
+            var result = _repository.Delete(Id);
+            return result;
         }
     }
 }

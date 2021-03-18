@@ -1,21 +1,21 @@
-﻿using System;
+﻿using ProjectManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectManagement.Services.Interfaces
 {
     public interface ITaskService
     {
-        Task<bool> Create(ProjectManagement.Entities.Task task);
+        Task Create(ProjectManagement.Entities.Task task);
 
-        Task<bool> Update(ProjectManagement.Entities.Task task);
-        Task Get(int taskId);
+        bool Update(ProjectManagement.Entities.Task task);
 
-        IOrderedQueryable<ProjectManagement.Entities.Task> GetAllTasks();
+        List<Task> GetAllTasks();
 
-        IOrderedQueryable<ProjectManagement.Entities.Task> GetTaskByTaskId(int Id); 
+        Task GetTaskByTaskId(int Id);
 
+        bool Delete(long id);
     }
 }

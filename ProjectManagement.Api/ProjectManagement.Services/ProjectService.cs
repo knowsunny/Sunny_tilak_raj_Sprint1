@@ -1,38 +1,49 @@
-﻿using ProjectManagement.Entities;
+﻿using ProjectManagement.Data.Interfaces;
+using ProjectManagement.Entities;
 using ProjectManagement.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectManagement.Services
 {
     public class ProjectService : IProjectService
     {
-        public Task<bool> Create(Project project)
+        private readonly IBaseRepository<Project> _repository;
+
+        public ProjectService(IBaseRepository<Project> repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
         }
 
-        public Project Get(int projectId)
+        public Project Create(Project project)
         {
-            throw new NotImplementedException();
+            var result = _repository.Add(project);
+            return (Project)result;
         }
 
-        public IOrderedQueryable<Project> GetAllProjects()
+        public List<Project> GetAllProjects()
         {
-            throw new NotImplementedException();
+            var result = _repository.Get();
+            return result.Cast<Project>().ToList();
         }
 
-        public IOrderedQueryable<Project> GetProjectByProjectId(int Id)
+        public Project GetProjectByProjectId(long Id)
         {
-            throw new NotImplementedException();
+            var result = _repository.Get(Id);
+            return (Project)result;
         }
 
-        public Task<bool> Update(Project project)
+        public bool Update(Project project)
         {
-            throw new NotImplementedException();
+            var ret = true;
+            var result = _repository.Update(project);
+            return ret;
+        }
+        public bool Delete(long Id)
+        {
+            var result = _repository.Delete(Id);
+            return result;
         }
     }
 }

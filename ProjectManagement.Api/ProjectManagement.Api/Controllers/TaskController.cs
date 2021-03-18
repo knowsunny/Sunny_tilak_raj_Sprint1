@@ -31,17 +31,17 @@ namespace ProjectManagement.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateTask([FromBody] ProjectManagement.Entities.Task task)
+        public IActionResult CreateTask([FromBody] ProjectManagement.Entities.Task task)
         {
-            var isTaskCreationSuccessful = await _taskService.Create(task);
+            var isTaskCreationSuccessful =  _taskService.Create(task);
 
             return Ok(isTaskCreationSuccessful);
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateTask([FromBody]  ProjectManagement.Entities.Task task)
+        public IActionResult UpdateTask([FromBody]  ProjectManagement.Entities.Task task)
         {
-            var isTaskUpdationSuccessful = await _taskService.Update(task);
+            var isTaskUpdationSuccessful =  _taskService.Update(task);
 
             return Ok(isTaskUpdationSuccessful);
         }
@@ -51,6 +51,13 @@ namespace ProjectManagement.Api.Controllers
         {
             var tasks = _taskService.GetAllTasks();
             return Ok(tasks);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteTask(long id)
+        {
+            var isProjectDeleted = _taskService.Delete(id);
+            return Ok(isProjectDeleted);
         }
     }
 }

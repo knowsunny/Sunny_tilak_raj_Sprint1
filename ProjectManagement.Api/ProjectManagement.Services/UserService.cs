@@ -1,44 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProjectManagement.Entities;
 using ProjectManagement.Services.Interfaces;
+using ProjectManagement.Data.Interfaces;
 
 namespace ProjectManagement.Services
 {
     public class UserService: IUserService
     {
+        private readonly IBaseRepository<User> _repository;
+        private readonly IUserRepository _userRepository;
 
-        public User Get(int userId)
+        public UserService(IBaseRepository<User> repository, IUserRepository userRepository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+            _userRepository = userRepository;
         }
 
-        public IOrderedQueryable<User> GetUserByUserId(int Id)
+        public User GetUserByUserId(long Id)
         {
-            throw new NotImplementedException();
+            var result = _repository.Get(Id);
+            return (User)result;
         }
 
-        public IOrderedQueryable<User> GetAllUsers()
+        public List<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            var result = _repository.Get();
+            return result.Cast<User>().ToList();
         }
 
-        public Task<bool> Update(User user)
+        public bool Update(User user)
         {
-            throw new NotImplementedException();
+            var ret = true;
+            var result = _repository.Update(user);
+            return ret;
         }
 
-        public Task<bool> Create(User user)
+        public User Create(User user)
         {
-            throw new NotImplementedException();
+            var result=_repository.Add(user);
+            return (User)result;
         }
 
-         public Task<bool> UserLogin(User user)
+         public User UserLogin(User user)
         {
-            throw new NotImplementedException();
+            String Id = user.Email;
+            String password = user.Password;
+            var result = _userRepository.GetUserByEmailPassword(Id,password);
+            return result;
+        }
+
+        public bool Delete(long Id)
+        {
+            var result = _repository.Delete(Id);
+            return result;
         }
     }
 }

@@ -10,3 +10,17 @@ I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj
 I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csproj.CopyComplete
 I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.dll
 I:\dotnet\ProjectManagement\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.pdb
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.dll
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.pdb
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csprojAssemblyReference.cache
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.AssemblyInfoInputs.cache
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.AssemblyInfo.cs
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csproj.CoreCompileInputs.cache
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.deps.json
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.dll
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Services.pdb
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Data.Interfaces.dll
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Entities.dll
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Data.Interfaces.pdb
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\bin\Debug\netstandard2.0\ProjectManagement.Entities.pdb
+I:\dotnet\Sunny_tilak_raj_Sprint1\ProjectManagement.Api\ProjectManagement.Services\obj\Debug\netstandard2.0\ProjectManagement.Services.csproj.CopyComplete

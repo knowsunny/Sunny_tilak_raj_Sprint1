@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <ProjectReference Include="..\ProjectManagement.Data\ProjectManagement.Data.Interfaces.csproj" />
+	  <ProjectReference Include="..\ProjectManagement.Data.Implementation\ProjectManagement.Data.Implementation.csproj" />
     <ProjectReference Include="..\ProjectManagement.Entities\ProjectManagement.Entities.csproj" />
 	  <ProjectReference Include="..\ProjectManagement.Shared\ProjectManagement.Shared.csproj" />
 	  <ProjectReference Include="..\ProjectManagement.Services\ProjectManagement.Services.csproj" />

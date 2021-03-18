@@ -1,4 +1,5 @@
 ﻿using ProjectManagement.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -6,16 +7,17 @@ namespace ProjectManagement.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<bool> Create(User user);
+        User Create(User user);
 
-        Task<bool> Update(User user);
-        User Get(int userId);
+        bool Update(User user);
 
-        IOrderedQueryable<User> GetAllUsers();
+        List<User> GetAllUsers();
 
-        IOrderedQueryable<User> GetUserByUserId(int Id);
+        User GetUserByUserId(long Id);
 
-        Task<bool> UserLogin(User user);
+        User UserLogin(User user);
+
+        bool Delete(long id);
     }
 
 

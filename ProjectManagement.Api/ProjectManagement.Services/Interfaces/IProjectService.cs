@@ -9,14 +9,13 @@ namespace ProjectManagement.Services.Interfaces
 {
     public interface IProjectService
     {
-        Task<bool> Create(Project project);
+        Project Create(Project project);
 
-        Task<bool> Update(Project project);
-        Project Get(int projectId);
+        bool Update(Project project);
 
-        IOrderedQueryable<Project> GetAllProjects();
+        List<Project> GetAllProjects();
 
-        IOrderedQueryable<Project> GetProjectByProjectId(int Id);
-
+        Project GetProjectByProjectId(long Id);
+        bool Delete(long id);
     }
 }

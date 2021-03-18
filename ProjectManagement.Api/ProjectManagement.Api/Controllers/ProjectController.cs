@@ -20,7 +20,7 @@ namespace ProjectManagement.Api.Controllers
             this._projectService = projectService;
         }
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> Get(long id)
         {
             if (id > 0)
             {
@@ -34,17 +34,17 @@ namespace ProjectManagement.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProject([FromBody] Project project)
+        public IActionResult CreateProject([FromBody] Project project)
         {
-            var isProjectCreationSuccessful = await _projectService.Create(project);
+            var isProjectCreationSuccessful = _projectService.Create(project);
 
             return Ok(isProjectCreationSuccessful);
         }
 
         [HttpPut]
-        public async  Task<IActionResult> UpdateProject([FromBody] Project project)
+        public IActionResult UpdateProject([FromBody] Project project)
         {
-            var isProjectUpdationSuccessful = await _projectService.Update(project);
+            var isProjectUpdationSuccessful =  _projectService.Update(project);
 
             return Ok(isProjectUpdationSuccessful);
         }
@@ -54,6 +54,13 @@ namespace ProjectManagement.Api.Controllers
         {
             var projects = _projectService.GetAllProjects();
             return Ok(projects);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteProject(long id)
+        {
+            var isProjectDeleted = _projectService.Delete(id);
+            return Ok(isProjectDeleted);
         }
     }
 }

@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ProjectManagement.Data\ProjectManagement.Data.Interfaces.csproj" />
 	<ProjectReference Include="..\ProjectManagement.Services\ProjectManagement.Services.csproj" />
+	  <ProjectReference Include="..\ProjectManagement.Shared\ProjectManagement.Shared.csproj" />
   </ItemGroup>
 
 </Project>

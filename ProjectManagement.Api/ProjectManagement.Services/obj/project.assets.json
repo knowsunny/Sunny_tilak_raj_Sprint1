@@ -308,6 +308,19 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "ProjectManagement.Data.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ProjectManagement.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectManagement.Data.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectManagement.Data.Interfaces.dll": {}
+        }
+      },
       "ProjectManagement.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1040,6 +1053,11 @@
         "version.txt"
       ]
     },
+    "ProjectManagement.Data.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../ProjectManagement.Data/ProjectManagement.Data.Interfaces.csproj",
+      "msbuildProject": "../ProjectManagement.Data/ProjectManagement.Data.Interfaces.csproj"
+    },
     "ProjectManagement.Entities/1.0.0": {
       "type": "project",
       "path": "../ProjectManagement.Entities/ProjectManagement.Entities.csproj",
@@ -1050,6 +1068,7 @@
     ".NETStandard,Version=v2.0": [
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "NETStandard.Library >= 2.0.3",
+      "ProjectManagement.Data.Interfaces >= 1.0.0",
       "ProjectManagement.Entities >= 1.0.0"
     ]
   },
@@ -1059,11 +1078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\dotnet\\ProjectManagement\\ProjectManagement.Api\\ProjectManagement.Services\\ProjectManagement.Services.csproj",
+      "projectUniqueName": "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Services\\ProjectManagement.Services.csproj",
       "projectName": "ProjectManagement.Services",
-      "projectPath": "I:\\dotnet\\ProjectManagement\\ProjectManagement.Api\\ProjectManagement.Services\\ProjectManagement.Services.csproj",
+      "projectPath": "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Services\\ProjectManagement.Services.csproj",
       "packagesPath": "C:\\Users\\Sunny\\.nuget\\packages\\",
-      "outputPath": "I:\\dotnet\\ProjectManagement\\ProjectManagement.Api\\ProjectManagement.Services\\obj\\",
+      "outputPath": "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sunny\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1080,8 +1099,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "I:\\dotnet\\ProjectManagement\\ProjectManagement.Api\\ProjectManagement.Entities\\ProjectManagement.Entities.csproj": {
-              "projectPath": "I:\\dotnet\\ProjectManagement\\ProjectManagement.Api\\ProjectManagement.Entities\\ProjectManagement.Entities.csproj"
+            "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Data\\ProjectManagement.Data.Interfaces.csproj": {
+              "projectPath": "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Data\\ProjectManagement.Data.Interfaces.csproj"
+            },
+            "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Entities\\ProjectManagement.Entities.csproj": {
+              "projectPath": "I:\\dotnet\\Sunny_tilak_raj_Sprint1\\ProjectManagement.Api\\ProjectManagement.Entities\\ProjectManagement.Entities.csproj"
             }
           }
         }
@@ -1117,7 +1139,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,7 +10,7 @@ namespace ProjectManagement.Shared
            : base(options)
         {
         }
-
+        public DbSet<BaseEntity> BaseEntitys { get; set; }
         public DbSet<User> Users { get; set; }
 
         public DbSet<Project> Projects { get; set; }

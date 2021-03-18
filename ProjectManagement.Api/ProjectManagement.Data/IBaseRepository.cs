@@ -8,7 +8,7 @@ namespace ProjectManagement.Data.Interfaces
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        IQueryable<T> Get();
+        IEnumerable<T> Get();
 
         T Get(long id);
 
@@ -16,7 +16,7 @@ namespace ProjectManagement.Data.Interfaces
 
         T Update(T entity);
 
-        void Delete(long id);
+        bool Delete(long id);
 
     }
 }

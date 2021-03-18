@@ -22,7 +22,7 @@ namespace ProjectManagement.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetUserById(int id)
+        public IActionResult GetUserById(long id)
         {
             if (id > 0)
             {
@@ -36,19 +36,19 @@ namespace ProjectManagement.Api.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] User user)
+        public  IActionResult CreateUser([FromBody] User user)
         {
-            var isUserCreationSuccessful = await _userService.Create(user);
+            var userCreated =  _userService.Create(user);
 
-            return Ok(isUserCreationSuccessful);
+            return Ok(userCreated);
         } 
 
         [HttpPut]
-        public async Task<IActionResult> UpdateUser(User user)
+        public  IActionResult UpdateUser(User user)
         {
-            var isUserUpdationSuccessful = await _userService.Update(user);
+            var isUserUpdationSuccessful =  _userService.Update(user);
 
-            return Ok(isUserUpdationSuccessful);
+            return Ok(value: isUserUpdationSuccessful);
         }
 
         [HttpGet]
@@ -63,6 +63,13 @@ namespace ProjectManagement.Api.Controllers
         {
             var isAuthenticated = _userService.UserLogin(user);
             return Ok(isAuthenticated);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteUser(long id)
+        {
+            var isProjectDeleted = _userService.Delete(id);
+            return Ok(isProjectDeleted);
         }
     }
 }
