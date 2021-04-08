@@ -17,11 +17,15 @@ namespace ProjectManagement.Api.Controllers
             this._taskService = taskService;
         }
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public IActionResult Get(int id)
         {
             if (id > 0)
             {
                 var task = _taskService.GetTaskByTaskId(id);
+                if (task == null)
+                {
+                    return NotFound();
+                }
                 return Ok(task);
             }
             else

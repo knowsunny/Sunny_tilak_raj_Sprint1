@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.Data.Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.Data.Implementation", "ProjectManagement.Data.Implementation\ProjectManagement.Data.Implementation.csproj", "{57A2321D-AF71-47EA-8815-A47757BAF9B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.Services", "ProjectManagement.Services\ProjectManagement.Services.csproj", "{95B8422D-0760-40E5-91D3-67219E53D092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.Services", "ProjectManagement.Services\ProjectManagement.Services.csproj", "{95B8422D-0760-40E5-91D3-67219E53D092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.Tests", "XUnitProjectManagement\ProjectManagement.Tests.csproj", "{F9A37627-4DC5-48E1-887A-957304B56A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.IntegrationTests", "IntegrationTests\ProjectManagement.IntegrationTests.csproj", "{9A5E500F-718A-41AE-B770-EB91AF7700AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{95B8422D-0760-40E5-91D3-67219E53D092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95B8422D-0760-40E5-91D3-67219E53D092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95B8422D-0760-40E5-91D3-67219E53D092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A37627-4DC5-48E1-887A-957304B56A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A37627-4DC5-48E1-887A-957304B56A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A37627-4DC5-48E1-887A-957304B56A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A37627-4DC5-48E1-887A-957304B56A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5E500F-718A-41AE-B770-EB91AF7700AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5E500F-718A-41AE-B770-EB91AF7700AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5E500F-718A-41AE-B770-EB91AF7700AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5E500F-718A-41AE-B770-EB91AF7700AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

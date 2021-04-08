@@ -27,6 +27,10 @@ namespace ProjectManagement.Api.Controllers
             if (id > 0)
             {
                 var user = _userService.GetUserByUserId(id);
+                if (user == null)
+                {
+                    return NotFound();
+                }
                 return Ok(user);
             }
             else
@@ -62,6 +66,9 @@ namespace ProjectManagement.Api.Controllers
         public IActionResult UserLogin(User user)
         {
             var isAuthenticated = _userService.UserLogin(user);
+
+            if (isAuthenticated==null)
+                return NotFound(isAuthenticated);
             return Ok(isAuthenticated);
         }
 

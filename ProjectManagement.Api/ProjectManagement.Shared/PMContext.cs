@@ -16,5 +16,10 @@ namespace ProjectManagement.Shared
         public DbSet<Project> Projects { get; set; }
 
         public DbSet<Task> Tasks { get; set; }
+
+        public static implicit operator DbContextOptions<DbContext>(PMContext v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -20,11 +20,15 @@ namespace ProjectManagement.Api.Controllers
             this._projectService = projectService;
         }
         [HttpGet("{id}")]
-        public ActionResult<string> Get(long id)
+        public IActionResult Get(long id)
         {
             if (id > 0)
             {
                 var project = _projectService.GetProjectByProjectId(id);
+                if (project == null)
+                {
+                    return NotFound();
+                }
                 return Ok(project);
             }
             else
